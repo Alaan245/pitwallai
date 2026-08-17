@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabase";
 import { trpc } from "@/providers/trpc";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -8,9 +7,24 @@ export type Plan = "free" | "premium";
 export function usePlan() {
   const { user, isAuthenticated, isLoading: authLoading } = useAuth();
   const [plan, setPlan] = useState<Plan>("free");
-  const [profileLoading, setProfileLoading] = useState(true);
 
   const utils = trpc.useUtils();
+
+  const { data: profileData, isLoading: profileLoading } =
+    trpc.plan.myPlan.useQuery(undefined, {
+      enabled: isAuthenticated && !!user,
+      retry: false,
+    });
+
+  useEffect(() => {
+    if (!isAuthenticated || !user) {
+      setPlan("free");
+      return;
+    }
+    if (profileData?.plan) {
+      setPlan(profileData.plan as Plan);
+    }
+  }, [isAuthenticated, user, profileData]);
 
   const upgradeMutation = trpc.plan.upgrade.useMutation({
     onSuccess: async () => {
@@ -25,34 +39,6 @@ export function usePlan() {
       await utils.plan.myPlan.invalidate();
     },
   });
-
-  useEffect(() => {
-    if (!isAuthenticated || !user) {
-      setPlan("free");
-      setProfileLoading(false);
-      return;
-    }
-
-    let cancelled = false;
-    setProfileLoading(true);
-
-    supabase
-      .from("profiles")
-      .select("plan")
-      .eq("id", user.id)
-      .single()
-      .then(({ data, error }) => {
-        if (cancelled) return;
-        if (!error && data?.plan) {
-          setPlan(data.plan as Plan);
-        }
-        setProfileLoading(false);
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [isAuthenticated, user]);
 
   return {
     user,
