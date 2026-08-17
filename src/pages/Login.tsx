@@ -15,20 +15,24 @@ export default function Login() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("[login] submit started", { isSignUp, email });
     setLoading(true);
     setError(null);
 
-    const { error: authError } = isSignUp
+    const result = isSignUp
       ? await supabase.auth.signUp({ email, password })
       : await supabase.auth.signInWithPassword({ email, password });
 
+    console.log("[login] supabase result:", result);
     setLoading(false);
 
-    if (authError) {
-      setError(authError.message);
+    if (result.error) {
+      console.error("[login] auth error:", result.error);
+      setError(result.error.message);
       return;
     }
 
+    console.log("[login] navigating to /app");
     navigate("/app");
   };
 
