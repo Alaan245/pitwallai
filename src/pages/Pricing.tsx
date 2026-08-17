@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, Check, Crown, Flag, Loader2 } from "lucide-react";
+import { ArrowLeft, Check, Crown, Flag } from "lucide-react";
 import { usePlan } from "../hooks/usePlan";
+
+const WHOP_CHECKOUT_URL = "https://whop.com/checkout/plan_7NnRIdmkBrcdr";
 
 const FREE_FEATURES = [
   "5 profils pilotes complets (sur 34)",
@@ -19,16 +21,16 @@ const PREMIUM_FEATURES = [
 ];
 
 export default function Pricing() {
-  const { isAuthenticated, isPremium, upgrade, upgrading, isLoading } = usePlan();
+  const { isAuthenticated, isPremium, isLoading } = usePlan();
   const [cycle, setCycle] = useState<"monthly" | "yearly">("monthly");
   const navigate = useNavigate();
 
-  const handleUpgrade = async () => {
+  const handleUpgrade = () => {
     if (!isAuthenticated) {
       navigate("/login");
       return;
     }
-    await upgrade({ cycle });
+    window.location.href = WHOP_CHECKOUT_URL;
   };
 
   return (
@@ -140,21 +142,17 @@ export default function Pricing() {
             ) : (
               <button
                 onClick={handleUpgrade}
-                disabled={upgrading || isLoading}
+                disabled={isLoading}
                 className="font-display mt-8 flex w-full items-center justify-center gap-2 bg-[#ff9d0a] py-3 text-sm font-bold uppercase tracking-wider text-[#0b0c0d] transition-opacity hover:opacity-85 disabled:opacity-50"
               >
-                {upgrading ? (
-                  <Loader2 className="h-4 w-4 animate-spin" />
-                ) : (
-                  <Crown className="h-4 w-4" />
-                )}
+                <Crown className="h-4 w-4" />
                 {isAuthenticated
                   ? `Passer Premium — ${cycle === "monthly" ? "6,99 €/mois" : "59 €/an"}`
                   : "Créer un profil pour continuer"}
               </button>
             )}
             <p className="mt-3 text-center font-data text-[10px] leading-relaxed text-white/30">
-              Démo : le checkout est simulé, aucun paiement réel n'est débité.
+              Paiement sécurisé via Whop. Accès Premium immédiat après validation.
             </p>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
 import { appRouter } from "./router.js";
 import { createContext } from "./context.js";
 import { env } from "./lib/env.js";
+import { registerWhopWebhook } from "./whop-webhook.js";
 
 const app = new Hono<{ Bindings: HttpBindings }>();
 
@@ -17,6 +18,9 @@ app.use("/api/trpc/*", async (c) => {
     createContext,
   });
 });
+
+registerWhopWebhook(app);
+
 app.all("/api/*", (c) => c.json({ error: "Not Found" }, 404));
 
 export default app;

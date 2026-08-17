@@ -14,4 +14,6 @@ export const env = {
   supabaseUrl: required("SUPABASE_URL", process.env.VITE_SUPABASE_URL),
   supabaseServiceRoleKey: required("SUPABASE_SERVICE_ROLE_KEY"),
   supabaseAnonKey: required("VITE_SUPABASE_ANON_KEY"),
+  // Secret Whop pour vérifier les signatures de webhook (Dashboard → Developer → Webhooks).
+  whopWebhookSecret: process.env.WHOP_WEBHOOK_SECRET ?? "",
 };
