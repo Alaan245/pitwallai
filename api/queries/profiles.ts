@@ -1,5 +1,5 @@
-import { supabaseAdmin } from "../lib/supabase";
-import type { Database } from "../../contracts/database.types";
+import { supabaseAdmin } from "../lib/supabase.js";
+import type { Database } from "@contracts/database.types";
 
 type Profile = Database["public"]["Tables"]["profiles"]["Row"];
 

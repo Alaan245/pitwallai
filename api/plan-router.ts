@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { createRouter, authedQuery } from "./middleware";
-import { ensureProfile, setPlan } from "./queries/profiles";
+import { createRouter, authedQuery } from "./middleware.js";
+import { ensureProfile, setPlan } from "./queries/profiles.js";
 
 export const planRouter = createRouter({
   // Plan courant de l'utilisateur connecté (crée le profil "free" au 1er appel)

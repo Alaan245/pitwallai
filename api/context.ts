@@ -1,6 +1,6 @@
 import type { FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch";
 import type { User } from "@supabase/supabase-js";
-import { supabaseAdmin } from "./lib/supabase";
+import { supabaseAdmin } from "./lib/supabase.js";
 
 export type TrpcContext = {
   req: Request;
