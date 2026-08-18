@@ -1,6 +1,6 @@
 import { Webhook } from "standardwebhooks";
 import { env } from "./lib/env.js";
-import { supabaseAdmin } from "./lib/supabase.js";
+import { getSupabaseAdmin } from "./lib/supabase.js";
 import type { Hono, Env, Schema } from "hono";
 
 const RELEVANT_EVENTS = new Set(["payment.succeeded", "membership.activated"]);
@@ -23,7 +23,7 @@ function getWhopEmail(data: unknown): string | undefined {
 async function upgradeUserByEmail(email: string) {
   // Récupère l'utilisateur Supabase par email via la clé service_role.
   const { data: userData, error: listError } =
-    await supabaseAdmin.auth.admin.listUsers({
+    await getSupabaseAdmin().auth.admin.listUsers({
       page: 1,
       perPage: 1,
     });
@@ -41,7 +41,7 @@ async function upgradeUserByEmail(email: string) {
   }
 
   // Met à jour le profil en premium (crée le profil si besoin).
-  const { error: upsertError } = await supabaseAdmin
+  const { error: upsertError } = await getSupabaseAdmin()
     .from("profiles")
     .upsert(
       { id: user.id, plan: "premium", upgraded_at: new Date().toISOString() },

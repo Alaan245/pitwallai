@@ -1,6 +1,6 @@
 import type { FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch";
 import type { User } from "@supabase/supabase-js";
-import { supabaseAdmin } from "./lib/supabase.js";
+import { getSupabaseAdmin } from "./lib/supabase.js";
 
 export type TrpcContext = {
   req: Request;
@@ -22,7 +22,7 @@ export async function createContext(
   if (!token) return ctx;
 
   try {
-    const { data, error } = await supabaseAdmin.auth.getUser(token);
+    const { data, error } = await getSupabaseAdmin().auth.getUser(token);
     if (!error && data.user) {
       ctx.user = data.user;
     }

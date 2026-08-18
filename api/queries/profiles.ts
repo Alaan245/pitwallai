@@ -1,10 +1,10 @@
-import { supabaseAdmin } from "../lib/supabase.js";
+import { getSupabaseAdmin } from "../lib/supabase.js";
 import type { Database } from "@contracts/database.types";
 
 type Profile = Database["public"]["Tables"]["profiles"]["Row"];
 
 export async function getProfileByUserId(userId: string): Promise<Profile | null> {
-  const { data, error } = await supabaseAdmin
+  const { data, error } = await getSupabaseAdmin()
     .from("profiles")
     .select("*")
     .eq("id", userId)
@@ -21,7 +21,7 @@ export async function ensureProfile(userId: string): Promise<Profile> {
   const existing = await getProfileByUserId(userId);
   if (existing) return existing;
 
-  const { data, error } = await supabaseAdmin
+  const { data, error } = await getSupabaseAdmin()
     .from("profiles")
     .insert({ id: userId, plan: "free" })
     .select()
@@ -39,7 +39,7 @@ export async function setPlan(
 ): Promise<Profile> {
   await ensureProfile(userId);
 
-  const { data, error } = await supabaseAdmin
+  const { data, error } = await getSupabaseAdmin()
     .from("profiles")
     .update({
       plan,
