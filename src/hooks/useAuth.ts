@@ -19,11 +19,19 @@ export function useAuth(options?: UseAuthOptions) {
   useEffect(() => {
     let mounted = true;
 
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (!mounted) return;
-      setUser(session?.user ? mapSupabaseUser(session.user) : null);
-      setIsLoading(false);
-    });
+    supabase.auth
+      .getSession()
+      .then(({ data: { session } }) => {
+        if (!mounted) return;
+        setUser(session?.user ? mapSupabaseUser(session.user) : null);
+      })
+      .catch((err) => {
+        console.error("[useAuth] getSession failed:", err);
+      })
+      .finally(() => {
+        if (!mounted) return;
+        setIsLoading(false);
+      });
 
     const {
       data: { subscription },

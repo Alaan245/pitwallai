@@ -21,7 +21,7 @@ const PREMIUM_FEATURES = [
 ];
 
 export default function Pricing() {
-  const { isAuthenticated, isPremium, isLoading } = usePlan();
+  const { isAuthenticated, isPremium } = usePlan();
   const [cycle, setCycle] = useState<"monthly" | "yearly">("monthly");
   const navigate = useNavigate();
 
@@ -142,8 +142,7 @@ export default function Pricing() {
             ) : (
               <button
                 onClick={handleUpgrade}
-                disabled={isLoading}
-                className="font-display mt-8 flex w-full items-center justify-center gap-2 bg-[#ff9d0a] py-3 text-sm font-bold uppercase tracking-wider text-[#0b0c0d] transition-opacity hover:opacity-85 disabled:opacity-50"
+                className="font-display mt-8 flex w-full items-center justify-center gap-2 bg-[#ff9d0a] py-3 text-sm font-bold uppercase tracking-wider text-[#0b0c0d] transition-opacity hover:opacity-85"
               >
                 <Crown className="h-4 w-4" />
                 {isAuthenticated
