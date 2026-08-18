@@ -9,7 +9,7 @@ export default function Profile() {
     redirectOnUnauthenticated: true,
     redirectPath: LOGIN_PATH,
   });
-  const { isPremium, plan, downgrade } = usePlan();
+  const { isPremium, plan } = usePlan();
   const navigate = useNavigate();
 
   if (isLoading || !isAuthenticated || !user) {
@@ -77,12 +77,23 @@ export default function Profile() {
               </p>
             </div>
             {isPremium ? (
-              <button
-                onClick={() => downgrade()}
-                className="font-display border border-white/20 px-5 py-2.5 text-sm font-semibold uppercase tracking-wider text-white/60 transition-colors hover:border-red-400 hover:text-red-400"
-              >
-                Résilier (démo)
-              </button>
+              <div className="text-right">
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://whop.com/hub",
+                      "_blank",
+                      "noopener,noreferrer",
+                    )
+                  }
+                  className="font-display border border-white/20 px-5 py-2.5 text-sm font-semibold uppercase tracking-wider text-white/60 transition-colors hover:border-red-400 hover:text-red-400"
+                >
+                  Résilier mon abonnement
+                </button>
+                <p className="mt-2 font-data text-[10px] text-white/30">
+                  Tu seras redirigé vers Whop pour gérer ton abonnement.
+                </p>
+              </div>
             ) : (
               <button
                 onClick={() => navigate("/tarifs")}

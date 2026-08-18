@@ -6,6 +6,7 @@ import {
   Flag,
   History,
   Lock,
+  RotateCcw,
   Sparkles,
   Trophy,
   Users,
@@ -244,6 +245,10 @@ export default function Landing() {
               >
                 <Crown className="h-4 w-4" /> Passer Premium
               </Link>
+              <p className="mt-3 flex items-center gap-2 font-data text-[11px] uppercase tracking-[0.2em] text-white/35">
+                <RotateCcw className="h-3.5 w-3.5" />
+                Abonnement résiliable à tout moment
+              </p>
             </div>
             <div className="relative border border-white/10 bg-white/[0.02] p-7">
               <div className="pointer-events-none select-none opacity-40 blur-[3px]">

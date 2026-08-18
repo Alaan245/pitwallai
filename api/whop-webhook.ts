@@ -3,7 +3,12 @@ import { env } from "./lib/env.js";
 import { getSupabaseAdmin } from "./lib/supabase.js";
 import type { Hono, Env, Schema } from "hono";
 
-const RELEVANT_EVENTS = new Set(["payment.succeeded", "membership.activated"]);
+const UPGRADE_EVENTS = new Set(["payment.succeeded", "membership.activated"]);
+const CANCELLATION_EVENTS = new Set([
+  "membership.cancelled",
+  "membership.expired",
+]);
+const RELEVANT_EVENTS = new Set([...UPGRADE_EVENTS, ...CANCELLATION_EVENTS]);
 
 function getWhopEmail(data: unknown): string | undefined {
   if (!data || typeof data !== "object") return undefined;
@@ -13,8 +18,8 @@ function getWhopEmail(data: unknown): string | undefined {
   const candidate =
     record.user_email ??
     record.email ??
-    (record.user && typeof data === "object"
-      ? (data as Record<string, unknown>).user_email
+    (record.user && typeof record.user === "object"
+      ? (record.user as Record<string, unknown>).user_email
       : undefined);
 
   return typeof candidate === "string" ? candidate : undefined;
@@ -25,7 +30,7 @@ async function upgradeUserByEmail(email: string) {
   const { data: userData, error: listError } =
     await getSupabaseAdmin().auth.admin.listUsers({
       page: 1,
-      perPage: 1,
+      perPage: 1000,
     });
 
   if (listError) {
@@ -37,7 +42,9 @@ async function upgradeUserByEmail(email: string) {
   );
 
   if (!user) {
-    throw new Error(`No Supabase user found for email: ${email}`);
+    throw new Error(
+      `No Supabase user found for email: ${email} (checked ${userData.users.length} users)`,
+    );
   }
 
   // Met à jour le profil en premium (crée le profil si besoin).
@@ -45,6 +52,43 @@ async function upgradeUserByEmail(email: string) {
     .from("profiles")
     .upsert(
       { id: user.id, plan: "premium", upgraded_at: new Date().toISOString() },
+      { onConflict: "id" },
+    );
+
+  if (upsertError) {
+    throw new Error(`upsert profile failed: ${upsertError.message}`);
+  }
+
+  return user.id;
+}
+
+async function downgradeUserByEmail(email: string) {
+  // Récupère l'utilisateur Supabase par email via la clé service_role.
+  const { data: userData, error: listError } =
+    await getSupabaseAdmin().auth.admin.listUsers({
+      page: 1,
+      perPage: 1000,
+    });
+
+  if (listError) {
+    throw new Error(`listUsers failed: ${listError.message}`);
+  }
+
+  const user = userData.users.find(
+    (u) => u.email?.toLowerCase() === email.toLowerCase(),
+  );
+
+  if (!user) {
+    throw new Error(
+      `No Supabase user found for email: ${email} (checked ${userData.users.length} users)`,
+    );
+  }
+
+  // Met à jour le profil en free (crée le profil si besoin).
+  const { error: upsertError } = await getSupabaseAdmin()
+    .from("profiles")
+    .upsert(
+      { id: user.id, plan: "free", upgraded_at: null },
       { onConflict: "id" },
     );
 
@@ -96,13 +140,22 @@ export function registerWhopWebhook<E extends Env, S extends Schema, BasePath ex
     }
 
     try {
-      const userId = await upgradeUserByEmail(email);
-      console.log(`[whop] user ${userId} upgraded to premium`);
+      if (UPGRADE_EVENTS.has(event.type ?? "")) {
+        const userId = await upgradeUserByEmail(email);
+        console.log(`[whop] user ${userId} upgraded to premium`);
+        return c.json({ ok: true, userId }, 200);
+      }
+
+      const userId = await downgradeUserByEmail(email);
+      console.log(`[whop] user ${userId} downgraded to free`);
       return c.json({ ok: true, userId }, 200);
     } catch (err) {
-      console.error("[whop] upgrade failed:", err);
+      console.error("[whop] upgrade/downgrade failed:", err);
       return c.json(
-        { error: err instanceof Error ? err.message : "Upgrade failed" },
+        {
+          error:
+            err instanceof Error ? err.message : "Upgrade/downgrade failed",
+        },
         500,
       );
     }
