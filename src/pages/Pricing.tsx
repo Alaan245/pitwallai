@@ -120,9 +120,9 @@ export default function Pricing() {
               <Crown className="h-4 w-4" /> Premium
             </p>
             <p className="font-display mt-3 text-5xl font-bold">
-              {cycle === "monthly" ? "6,99 €" : "59 €"}
+              {cycle === "monthly" ? "7,20 €" : "59 €"}
               <span className="text-lg text-white/40">
-                {" "}/ {cycle === "monthly" ? "mois" : "an"}
+                {" "}/ {cycle === "monthly" ? "mois TTC" : "an"}
               </span>
             </p>
             <p className="mt-2 text-sm font-light text-white/50">
@@ -146,7 +146,7 @@ export default function Pricing() {
               >
                 <Crown className="h-4 w-4" />
                 {isAuthenticated
-                  ? `Passer Premium — ${cycle === "monthly" ? "6,99 €/mois" : "59 €/an"}`
+                  ? `Passer Premium — ${cycle === "monthly" ? "7,20 €/mois TTC" : "59 €/an"}`
                   : "Créer un profil pour continuer"}
               </button>
             )}
