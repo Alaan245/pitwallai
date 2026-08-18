@@ -6,6 +6,7 @@ import type { Hono, Env, Schema } from "hono";
 const UPGRADE_EVENTS = new Set(["payment.succeeded", "membership.activated"]);
 const CANCELLATION_EVENTS = new Set([
   "membership.cancelled",
+  "membership.deactivated",
   "membership.expired",
 ]);
 const RELEVANT_EVENTS = new Set([...UPGRADE_EVENTS, ...CANCELLATION_EVENTS]);
