@@ -5,7 +5,7 @@ const TICKER = [
   "ANT 219 pts — leader après Budapest",
   "Norris renoue avec la victoire (+15,0 s)",
   "Prochain GP : Zandvoort — 23 août",
-  "Hamilton, 41 ans, 2e du championnat en rouge",
+  "Hadjar blessé : Probablement remplacé par Lawson !",
   "Gasly : 1er podium en 2026 à Monaco !",
   "Verstappen invaincu à Zandvoort de 2021 à 2023",
   "Bakou : 100 % d'éditions avec safety car (2016-2021)",
