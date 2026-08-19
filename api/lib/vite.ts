@@ -7,6 +7,12 @@ import path from "path";
 type App = Hono<{ Bindings: HttpBindings }>;
 
 export function serveStaticFiles(app: App) {
+  // En production bundlée (Railway), import.meta.dirname n'existe pas.
+  // On n'a pas besoin de servir les fichiers statiques depuis l'API.
+  if (!import.meta.dirname) {
+    return;
+  }
+
   const distPath = path.resolve(import.meta.dirname, "../dist/public");
 
   app.use("*", serveStatic({ root: "./dist/public" }));
