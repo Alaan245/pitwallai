@@ -1,5 +1,6 @@
 import { Hono } from "hono";
 import { bodyLimit } from "hono/body-limit";
+import { cors } from "hono/cors";
 import type { HttpBindings } from "@hono/node-server";
 import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
 import { appRouter } from "./router.js";
@@ -10,6 +11,20 @@ import { registerWhopWebhook } from "./whop-webhook.js";
 const app = new Hono<{ Bindings: HttpBindings }>();
 
 app.use(bodyLimit({ maxSize: 50 * 1024 * 1024 }));
+
+// CORS : le frontend Vercel et le dev local appellent l'API Railway.
+app.use(
+  cors({
+    origin: [
+      "https://pitwallai-weld.vercel.app",
+      "http://localhost:3000",
+      "http://localhost:5173",
+    ],
+    allowHeaders: ["Authorization", "Content-Type"],
+    allowMethods: ["GET", "POST", "OPTIONS"],
+    credentials: true,
+  }),
+);
 
 app.get("/api/health", (c) =>
   c.json({ ok: true, ts: Date.now(), env: env.isProduction ? "production" : "dev" }),
