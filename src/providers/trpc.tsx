@@ -9,7 +9,7 @@ import type { ReactNode } from "react";
 export const trpc = createTRPCReact<AppRouter>();
 
 const queryClient = new QueryClient();
-const API_URL = import.meta.env.VITE_API_URL || "/api/trpc";
+const API_URL = import.meta.env.VITE_API_URL || "/api";
 
 const trpcClient = trpc.createClient({
   links: [
