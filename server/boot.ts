@@ -3,16 +3,16 @@ import { bodyLimit } from "hono/body-limit";
 import { cors } from "hono/cors";
 import type { HttpBindings } from "@hono/node-server";
 import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
-import { appRouter } from "./router.js";
-import { createContext } from "./context.js";
-import { env } from "./lib/env.js";
-import { registerWhopWebhook } from "./whop-webhook.js";
+import { appRouter } from "../api/router.js";
+import { createContext } from "../api/context.js";
+import { env } from "../api/lib/env.js";
+import { registerWhopWebhook } from "../api/whop-webhook.js";
 
 const app = new Hono<{ Bindings: HttpBindings }>();
 
 app.use(bodyLimit({ maxSize: 50 * 1024 * 1024 }));
 
-// CORS : le frontend Vercel et le dev local appellent l'API Railway.
+// CORS : le frontend Vercel et le dev local appellent l'API.
 app.use(
   cors({
     origin: [
@@ -46,7 +46,7 @@ export default app;
 
 if (env.isProduction && process.env.VERCEL !== "1") {
   const { serve } = await import("@hono/node-server");
-  const { serveStaticFiles } = await import("./lib/vite.js");
+  const { serveStaticFiles } = await import("../api/lib/vite.js");
   serveStaticFiles(app);
 
   const port = parseInt(process.env.PORT || "3000");

@@ -19,5 +19,5 @@
       "@contracts/*": ["./contracts/*"]
     }
   },
-  "include": ["api", "contracts"]
+  "include": ["api", "server", "contracts"]
 }
