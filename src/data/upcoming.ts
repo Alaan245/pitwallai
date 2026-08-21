@@ -54,7 +54,16 @@ export const upcomingRaces: UpcomingRace[] = [
         teamColor: "#27f4d2",
         probability: 31,
         rationale:
-          "Leader avec le meilleur package 2026. Sa gestion des pneus est l'atout n°1 sur ce tracé abrasif. Mais attention : sa dispersion de performance monte sur les circuits sinueux.",
+          "Leader avec le meilleur package 2026. Sa gestion des pneus est l'atout n°1 sur ce tracé abrasif. Mais attention aux erreurs sur ce tracé, pouvant causé des dommages à sa monoplace et perdre du temps.",
+      },
+      {
+        driver: "George Russell",
+        code: "RUS",
+        team: "Mercedes",
+        teamColor: "#27f4d2",
+        probability: 27,
+        rationale:
+          "Sa force en qualif est décisive sur un circuit où la position de piste est reine. Mais le format sprint réduit ses options stratégiques — le modèle préfère son coéquipier.",
       },
       {
         driver: "Max Verstappen",
@@ -73,15 +82,6 @@ export const upcomingRaces: UpcomingRace[] = [
         probability: 16,
         rationale:
           "Vainqueur ici en 2024 et 2025, et boosté par son succès à Budapest. S'il part devant, sa défense (78 % d'attaques repoussées) fait des ravages sur un circuit où dépasser est un calvaire.",
-      },
-      {
-        driver: "George Russell",
-        code: "RUS",
-        team: "Mercedes",
-        teamColor: "#27f4d2",
-        probability: 12,
-        rationale:
-          "Sa force en qualif est décisive sur un circuit où la position de piste est reine. Mais le format sprint réduit ses options stratégiques — le modèle préfère son coéquipier.",
       },
       {
         driver: "Charles Leclerc",
@@ -108,7 +108,7 @@ export const upcomingRaces: UpcomingRace[] = [
     sprint: false,
     laps: 53,
     circuitLength: "5,793 km",
-    drsZones: 2,
+    drsZones: 4,
     traits: [
       "Temple de la vitesse — 350 km/h",
       "Appuis minimum",
@@ -123,9 +123,9 @@ export const upcomingRaces: UpcomingRace[] = [
         code: "ANT",
         team: "Mercedes",
         teamColor: "#27f4d2",
-        probability: 34,
+        probability: 21,
         rationale:
-          "Le moteur Mercedes M17 est la référence en vitesse de pointe — et Monza, c'est 75 % de pleine charge. Un Italien peut gagner à domicile... mais en argent, pas en rouge.",
+          "Bien que l'italien part dernier à cause des pénalités moteur, le moteur Mercedes de la W17 est la référence en vitesse de pointe — et Monza, c'est 75 % de pleine charge. Grace à un rythme solide et une stratégie efficace, le modèle estime qu'il peut tout de même remporter cette course",
       },
       {
         driver: "Lewis Hamilton",
@@ -165,7 +165,7 @@ export const upcomingRaces: UpcomingRace[] = [
       },
     ],
     scenario:
-      "Le scénario central (68 %) : Antonelli contrôle depuis la première ligne, la question étant de savoir si les Ferrari passent les Mercedes au départ — les départs sont LE moment clé de Monza, avec 420 m avant la première chicane. Hamilton est le meilleur starter du plateau 2026 : s'il mène au virage 1, les tifosi font le reste.",
+      "Le scénario central (68 %) : Les Ferrari contrôlent depuis la première ligne, la question étant de savoir si Russell passe les Ferrari au départ, et si Antonelli est capable d'une remonté impressionnante — les départs sont LE moment clé de Monza, avec 420 m avant la première chicane. Hamilton est le meilleur starter du plateau 2026 : s'il mène au virage 1, les tifosi font le reste.",
     xFactor:
       "Le « slipstream warfare » : avec les monoplaces 2026 à aéro active, l'aspiration vaut 0,5 s. Un pilote 3e à 2 tours de l'arrivée n'est pas battu — il est exactement où il veut être.",
   },
