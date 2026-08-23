@@ -28,79 +28,8 @@ export interface UpcomingRace {
 
 export const upcomingRaces: UpcomingRace[] = [
   {
-    id: "zandvoort-2026",
-    round: 14,
-    gp: "Grand Prix des Pays-Bas",
-    circuit: "Circuit Zandvoort",
-    date: "23 août 2026",
-    days: "21–23 août",
-    sprint: true,
-    laps: 72,
-    circuitLength: "4,259 km",
-    drsZones: 3,
-    traits: [
-      "Virages relevés (banking à 18°)",
-      "Dépassements très difficiles",
-      "Abrasif — dégradation élevée",
-      "Effet foule orange pour Verstappen",
-    ],
-    weather: { temp: "21–26 °C", rainRisk: 45, wind: "Fort (mer du Nord)" },
-    confidence: "Moyenne",
-    contenders: [
-      {
-        driver: "Kimi Antonelli",
-        code: "ANT",
-        team: "Mercedes",
-        teamColor: "#27f4d2",
-        probability: 31,
-        rationale:
-          "Leader avec le meilleur package 2026. Sa gestion des pneus est l'atout n°1 sur ce tracé abrasif. Mais attention aux erreurs sur ce tracé, pouvant causé des dommages à sa monoplace et perdre du temps.",
-      },
-      {
-        driver: "George Russell",
-        code: "RUS",
-        team: "Mercedes",
-        teamColor: "#27f4d2",
-        probability: 27,
-        rationale:
-          "Sa force en qualif est décisive sur un circuit où la position de piste est reine. Mais le format sprint réduit ses options stratégiques — le modèle préfère son coéquipier.",
-      },
-      {
-        driver: "Max Verstappen",
-        code: "VER",
-        team: "Red Bull",
-        teamColor: "#3671c6",
-        probability: 22,
-        rationale:
-          "Invaincu ici de 2021 à 2023, +7 % de prime « domicile » calculée par le modèle. La RB22 manque de rythme, mais Zandvoort neutralise les déficits moteur — et la pluie possible le rapproche des Mercedes.",
-      },
-      {
-        driver: "Lando Norris",
-        code: "NOR",
-        team: "McLaren",
-        teamColor: "#ff8000",
-        probability: 16,
-        rationale:
-          "Vainqueur ici en 2024 et 2025, et boosté par son succès à Budapest. S'il part devant, sa défense (78 % d'attaques repoussées) fait des ravages sur un circuit où dépasser est un calvaire.",
-      },
-      {
-        driver: "Charles Leclerc",
-        code: "LEC",
-        team: "Ferrari",
-        teamColor: "#e8002d",
-        probability: 9,
-        rationale:
-          "Pénalisé par la dégradation arrière de la SF-26 sur ce type d'asphalte. Sa carte à jouer : une météo capricieuse qui ferait monter la variance — son terrain de jeu.",
-      },
-    ],
-    scenario:
-      "Le modèle trace deux scénarios dominants. Scénario sec (55 %) : pole et victoire contrôlée par une Mercedes, Antonelli devançant Russell via un undercut au 2e relais. Scénario pluie (45 %) : la hiérarchie se dissout, Verstappen passe favori en puissance avec un départ des 5 premières lignes suffisant — sa fenêtre d'attaque : les 10 premiers tours, seuls exploitables avant le train de DRS.",
-    xFactor:
-      "Le vent de mer du Nord : des rafales latérales de 40 km/h déstabilisent l'arrière dans le banking du virage 3. Historiquement, 3 safety cars en 5 éditions — le sprint ajoute une course au chaos.",
-  },
-  {
     id: "monza-2026",
-    round: 15,
+    round: 13,
     gp: "Grand Prix d'Italie",
     circuit: "Autodromo Nazionale Monza",
     date: "6 septembre 2026",
@@ -137,6 +66,15 @@ export const upcomingRaces: UpcomingRace[] = [
           "5 victoires à Monza, record partagé. Sa lecture des freinages (Variante della Roggia) et l'énergie des tifosi : le modèle lui donne sa meilleure chance de victoire Ferrari de la saison.",
       },
       {
+        driver: "Lando Norris",
+        code: "NOR",
+        team: "McLaren",
+        teamColor: "#ff8000",
+        probability: 17,
+        rationale:
+          "La MCL40 à moteur Mercedes souffre moins que Ferrari en ligne droite. Le modèle le voit capitaliser sur une bataille Mercedes-Ferrari, comme à Monza 2021 (P2 derrière Ricciardo).",
+      },
+      {
         driver: "Charles Leclerc",
         code: "LEC",
         team: "Ferrari",
@@ -146,22 +84,13 @@ export const upcomingRaces: UpcomingRace[] = [
           "Vainqueur ici en 2019 et 2024 — il connaît la trajectoire pour gagner avec une voiture pas la plus rapide. En qualif, sa spéciale : le tour parfait sous pression tifosi.",
       },
       {
-        driver: "Lando Norris",
-        code: "NOR",
-        team: "McLaren",
-        teamColor: "#ff8000",
-        probability: 13,
-        rationale:
-          "La MCL40 à moteur Mercedes souffre moins que Ferrari en ligne droite. Le modèle le voit capitaliser sur une bataille Mercedes-Ferrari, comme à Monza 2021 (P2 derrière Ricciardo).",
-      },
-      {
         driver: "George Russell",
         code: "RUS",
         team: "Mercedes",
         teamColor: "#27f4d2",
         probability: 11,
         rationale:
-          "Même package qu'Antonelli mais une conversion course inférieure cette saison. Son scénario : pole samedi, puis résistance — Monza pardonne rarement les défenses passives.",
+          "Même package qu'Antonelli mais une conversion course inférieure cette saison. Le modèle estime que Zandvoort n'a pas été un week-end concluant, demandant même à son équipe de ne pas laisser passer Antonelli. Il ne pourra probablement pas jouer la victoire, voir le podium.",
       },
     ],
     scenario:
@@ -171,7 +100,7 @@ export const upcomingRaces: UpcomingRace[] = [
   },
   {
     id: "madrid-2026",
-    round: 16,
+    round: 14,
     gp: "Grand Prix d'Espagne",
     circuit: "Madring, Madrid (nouveau)",
     date: "13 septembre 2026",
@@ -232,7 +161,7 @@ export const upcomingRaces: UpcomingRace[] = [
         teamColor: "#e8002d",
         probability: 10,
         rationale:
-          "382 départs = la plus grande bibliothèque de circuits de l'histoire. Sur l'inconnu, l'expérience compense la vitesse brute — le modèle lui donne un bonus « adaptabilité ».",
+          "383 départs = la plus grande bibliothèque de circuits de l'histoire. Sur l'inconnu, l'expérience compense la vitesse brute — le modèle lui donne un bonus « adaptabilité », ayant déjà essayé le circuit lors d'une journée de promotion.",
       },
     ],
     scenario:
@@ -242,7 +171,7 @@ export const upcomingRaces: UpcomingRace[] = [
   },
   {
     id: "baku-2026",
-    round: 17,
+    round: 15,
     gp: "Grand Prix d'Azerbaïdjan",
     circuit: "Bakou City Circuit",
     date: "26 septembre 2026",
@@ -310,5 +239,76 @@ export const upcomingRaces: UpcomingRace[] = [
       "Bakou se joue d'abord en qualif (Leclerc territoire) puis se décide au chaos : le modèle projette 1,8 safety car en moyenne et une probabilité de 35 % qu'un pilote hors top 5 de la grille monte sur le podium. Le scénario Leclerc : pole, course propre jusqu'au tour 40, puis survie. Le scénario chaos : Verstappen ou Hadjar ramassent les morceaux.",
     xFactor:
       "Le vent variable entre les immeubles : des rafales qui changent entre deux tours dans la section château (7,6 m de large). C'est là que Stroll, Ricciardo et tant d'autres ont perdu leur course — sans jamais l'avoir vu venir.",
+  },
+  {
+    id: "bahrain-2026",
+    round: 16,
+    gp: "Grand Prix de Bahreïn",
+    circuit: "Circuit international de Sepang",
+    date: "02 Octobre 2026",
+    days: "02-04 oct.",
+    sprint: false,
+    laps: 56,
+    circuitLength: "5,543 km",
+    drsZones: 4,
+    traits: [
+      "Retour au calendrier après 2017",
+      "Deux longues lignes droites",
+      "Tracé très abrasif — dégradation élevée",
+      "Pneus medium et hard à privilégier",
+    ],
+    weather: { temp: "22–27 °C", rainRisk: 35, wind: "Fort et variable" },
+    confidence: "Faible",
+    contenders: [
+      {
+        driver: "Kimi Antonelli",
+        code: "ANT",
+        team: "Mercedes",
+        teamColor: "#27f4d2",
+        probability: 34,
+        rationale:
+          "Nouveau circuit, mais reste favori sur le papier : la Mercedes W17 est la référence en vitesse de pointe et en gestion des gommes. Le modèle estime qu'il peut remporter cette course si la stratégie est optimale.",
+      },
+      {
+        driver: "Charles Leclerc",
+        code: "LEC",
+        team: "Ferrari",
+        teamColor: "#e8002d",
+        probability: 21,
+        rationale:
+          "Leclerc s'adapte vite aux nouveaux tracés, mais Sepang n'est plus au calendrier depuis 2017 : aucune donnée fiable avec la génération actuelle. Le modèle le place haut grâce à sa gestion des pneus en chaleur, avec une marge d'erreur importante.",
+      },
+      {
+        driver: "Max Verstappen",
+        code: "VER",
+        team: "Red Bull",
+        teamColor: "#3671c6",
+        probability: 19,
+        rationale:
+          "Verstappen n'a couru à Sepang qu'en junior et en 2017 avec une F1 très différente. Son instinct en course reste le meilleur du plateau, mais le modèle baisse sa probabilité face à l'inconnue du comportement de la RB26 sous 60 °C d'asphalte.",
+      },
+      {
+        driver: "Lando Norris",
+        code: "NOR",
+        team: "McLaren",
+        teamColor: "#ff8000",
+        probability: 15,
+        rationale:
+          "Norris découvrirait virtuellement Sepang en F1. La McLaren a montré une bonne polyvalence en 2026, et les longues lignes droites malaises lui conviennent — à condition de maîtriser la dégradation tropicalisée des gommes.",
+      },
+      {
+        driver: "Isack Hadjar",
+        code: "HAD",
+        team: "Red Bull",
+        teamColor: "#3671c6",
+        probability: 5,
+        rationale:
+          "Rookie en 2026 et jamais piloté à Sepang en catégorie reine. Le modèle voit un potentiel de surprise si la séance est chaotique, mais l'absence de référence rend toute projection très fragile.",
+      },
+    ],
+    scenario:
+      "Premier GP à Sepang depuis 2017 : le modèle manque de données fiables et projette une variance très élevée. La chaleur et l'humidité feront probablement le tri entre ceux qui gèrent les pneus et ceux qui subissent. 2 à 3 arrêts attendus, avec un risque de pluie orageuse qui pourrait tout changer.",
+    xFactor:
+      "Les orages tropicaux soudains : Sepang est célèbre pour ses averses imprévisibles en fin d'après-midi. Aucun pilote du plateau n'a géré ce circuit sous la pluie avec une F1 moderne — cela pourrait créer un énorme reset de grille à 15 tours de l'arrivée.",
   },
 ];

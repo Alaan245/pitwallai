@@ -22,6 +22,37 @@ export interface PastRace {
 export const pastRaces: PastRace[] = [
   // ── 2026 ─────────────────────────────────────────────────────
   {
+    id: "zandoort-2026",
+    year: 2026,
+    gp: "Grand Prix des Pays-Bas",
+    circuit: "Zandvoort",
+    winner: "Lando Norris",
+    winnerTeam: "McLaren",
+    conditions: "Mixte",
+    drama: 81,
+    podium: ["Lando Norris", "Kimi Antonelli", "George Russell"],
+    summary:
+      "Le champion 2025 renoue enfin avec la victoire pour la deuxieme fois cette saison : Une deuxième partie de course brillament maitrisé, avec un rythme de course impressionnant et une gestion des gommes parfaite. Il finit devant Antonelli, pourant leader durant de nombreux tours.",
+    moments: [
+      { ref: "T1", text: "Enorme accident de Verstappen dans le bancking, envoyant sa voiture dans le mur et termianant ces espoir de podium à domicile." },
+      { ref: "T6", text: "Au restart, Antonelli prend l'avantage sur Norris, il semble filé vers une 7ème victoire." },
+      { ref: "T55", text: "Bataille à trois, Hamilton, Norris et Antonelli pour la tête de course. Norris passe les deux et prend la tête." },
+      { ref: "T60", text: "VSC - Antonelli et les Ferrai mettent des Softs. Ils reviennent sur Russell P2, toutefois les Ferrari ne passeront pas." },
+    ],
+    aiDebrief: [
+      "La dernière course à Zandvoort illustre parfaitement le profil de Lando Norris : un pilote capable de gérer une course entière, avec un rythme de course impressionnant et une gestion des gommes parfaite. Le modèle relève que sa deuxième partie de course a été la plus rapide du plateau, lui permettant de remonter sur Antonelli. La McLaren serait désormais la 2ème puissance du plateau selon le moèdele.",
+      "Tension chez Ferrari : Hamilton frusté et se considiérait comme <cobaye> suite à la perte de temps subit par Leclerc, et par la perte de temps causé par l'équipe lors de la bataille avec Norris et Antonelli. Le modèle estime qu'à 14% la possibilité qu'Hamilton remporte cette course, à ce stade de la course, compte tenu de l'état de ses pneus avant la seconde VSC.",
+      "Opportinuté pour le reste du plateau : Le modèle souligne l'excellente performance de Fernando Alonso (P9), après avoir effectué de longs relais sur des Softs et des Hards. De même pour Hulkenberg après un week-end difficile. Egalement pour Gasly (P10) et Tsunoda bien qu'étant hors des points.",
+    ],
+    keyStats: [
+      { label: "Marge de victoire", value: "+11,5 s" },
+      { label: "Points Aston Martin", value: "ALO P9" },
+      { label: "Moment clé", value: "Tour 55 — NOR P3 → P1" },
+      { label: "DNF", value: "6" },
+    ],
+  },
+  
+  {
     id: "hongrie-2026",
     year: 2026,
     gp: "Grand Prix de Hongrie",

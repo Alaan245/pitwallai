@@ -2,19 +2,19 @@ import { useEffect, useState } from "react";
 import { Radio, TrendingUp } from "lucide-react";
 
 const TICKER = [
-  "ANT 219 pts — leader après Budapest",
-  "Norris renoue avec la victoire (+15,0 s)",
-  "Prochain GP : Zandvoort — 23 août",
-  "Hadjar blessé : Remplacé par Lawson !",
+  "ANT 242 pts — leader après Budapest",
+  "Norris : 2eme victoire d'affilée (+11,5 s)",
+  "Prochain GP : Monza — 04 septembre",
+  "Verstappen : DNF au premier tour à Zandvoort",
   "Antonelli : Pénalité moteur pour le GP de Monza",
-  "Verstappen invaincu à Zandvoort de 2021 à 2023",
+  "Tension entre les coéquipiers Ferrari, qu'est-ce que cela présage pour Monza ?",
   "Bakou : 100 % d'éditions avec safety car (2016-2021)",
 ];
 
 function useCountdown() {
   const [left, setLeft] = useState("");
   useEffect(() => {
-    const target = new Date("2026-08-23T15:00:00+02:00").getTime();
+    const target = new Date("2026-09-04T15:00:00+02:00").getTime();
     const tick = () => {
       const d = target - Date.now();
       if (d <= 0) return setLeft("Course en cours");
@@ -61,10 +61,10 @@ export default function Hero() {
         <div className="mt-10 inline-flex flex-wrap items-center gap-x-8 gap-y-4 border border-white/15 bg-white/[0.03] px-6 py-5">
           <div>
             <p className="font-data text-[10px] uppercase tracking-[0.3em] text-white/40">
-              Prochaine course · R14
+              Prochaine course · R13
             </p>
             <p className="font-display mt-1 text-2xl font-bold uppercase">
-              GP des Pays-Bas <span className="text-white/40">· Zandvoort</span>
+              GP d'Italie <span className="text-white/40">· Monza</span>
             </p>
           </div>
           <div className="h-10 w-px bg-white/15" />

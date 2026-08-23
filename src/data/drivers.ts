@@ -55,7 +55,7 @@ export const drivers: Driver[] = [
     wins: 6,
     poles: 4,
     podiums: 11,
-    starts: 37,
+    starts: 38,
     skills: { qualif: 93, racecraft: 90, pneus: 86, pluie: 82, mental: 88, constance: 94 },
     forces: [
       "Constance de podium irréelle pour un sophomore (85 %)",
@@ -89,7 +89,7 @@ export const drivers: Driver[] = [
     wins: 105,
     poles: 104,
     podiums: 202,
-    starts: 382,
+    starts: 383,
     skills: { qualif: 92, racecraft: 97, pneus: 96, pluie: 98, mental: 90, constance: 91 },
     forces: [
       "Meilleur racecraft mesuré de l'histoire de la base",
@@ -123,7 +123,7 @@ export const drivers: Driver[] = [
     wins: 71,
     poles: 44,
     podiums: 118,
-    starts: 232,
+    starts: 233,
     skills: { qualif: 95, racecraft: 98, pneus: 92, pluie: 96, mental: 93, constance: 90 },
     forces: [
       "Racecraft étalon-or : 84 % de dépassements réussis",
@@ -154,10 +154,10 @@ export const drivers: Driver[] = [
     era: "current",
     active: true,
     titles: 1,
-    wins: 12,
-    poles: 17,
+    wins: 13,
+    poles: 18,
     podiums: 45,
-    starts: 150,
+    starts: 151,
     skills: { qualif: 93, racecraft: 91, pneus: 89, pluie: 88, mental: 84, constance: 87 },
     forces: [
       "Meilleure défense de position du plateau (78 %)",
@@ -191,7 +191,7 @@ export const drivers: Driver[] = [
     wins: 9,
     poles: 27,
     podiums: 47,
-    starts: 160,
+    starts: 161,
     skills: { qualif: 97, racecraft: 90, pneus: 84, pluie: 86, mental: 83, constance: 85 },
     forces: [
       "Vitesse qualif proche de l'étalon Senna (indice 97)",
@@ -225,7 +225,7 @@ export const drivers: Driver[] = [
     wins: 7,
     poles: 11,
     podiums: 28,
-    starts: 150,
+    starts: 151,
     skills: { qualif: 94, racecraft: 87, pneus: 88, pluie: 84, mental: 82, constance: 89 },
     forces: [
       "Top 2 du plateau en performance pure sur un tour",
@@ -259,7 +259,7 @@ export const drivers: Driver[] = [
     wins: 9,
     poles: 6,
     podiums: 24,
-    starts: 70,
+    starts: 71,
     skills: { qualif: 90, racecraft: 88, pneus: 87, pluie: 80, mental: 91, constance: 86 },
     forces: [
       "Mental le plus froid du plateau (écart-type minimal)",
@@ -293,7 +293,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 0,
     podiums: 3,
-    starts: 37,
+    starts: 38,
     skills: { qualif: 88, racecraft: 85, pneus: 82, pluie: 78, mental: 86, constance: 84 },
     forces: [
       "Constance chirurgicale : zéro accident en 2026",
@@ -327,7 +327,7 @@ export const drivers: Driver[] = [
     wins: 32,
     poles: 22,
     podiums: 106,
-    starts: 430,
+    starts: 431,
     skills: { qualif: 91, racecraft: 95, pneus: 90, pluie: 94, mental: 96, constance: 88 },
     forces: [
       "Racecraft toujours top 3 du plateau à 45 ans",
@@ -361,7 +361,7 @@ export const drivers: Driver[] = [
     wins: 4,
     poles: 6,
     podiums: 27,
-    starts: 240,
+    starts: 241,
     skills: { qualif: 89, racecraft: 89, pneus: 91, pluie: 86, mental: 88, constance: 90 },
     forces: [
       "Meilleure lecture stratégique en voiture du plateau",
@@ -395,7 +395,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 1,
     podiums: 1,
-    starts: 270,
+    starts: 271,
     skills: { qualif: 88, racecraft: 84, pneus: 85, pluie: 87, mental: 82, constance: 86 },
     forces: [
       "Record de longévité sans victoire — brisé en beauté",
@@ -429,7 +429,7 @@ export const drivers: Driver[] = [
     wins: 10,
     poles: 20,
     podiums: 67,
-    starts: 250,
+    starts: 251,
     skills: { qualif: 92, racecraft: 83, pneus: 86, pluie: 80, mental: 84, constance: 85 },
     forces: [
       "20 poles : vitesse pure de très haut niveau",
@@ -463,7 +463,7 @@ export const drivers: Driver[] = [
     wins: 6,
     poles: 3,
     podiums: 39,
-    starts: 285,
+    starts: 286,
     skills: { qualif: 84, racecraft: 88, pneus: 93, pluie: 84, mental: 86, constance: 82 },
     forces: [
       "Gestion des pneus historique (indice 93)",
@@ -498,7 +498,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 0,
     podiums: 2,
-    starts: 135,
+    starts: 136,
     skills: { qualif: 88, racecraft: 86, pneus: 87, pluie: 82, mental: 87, constance: 88 },
     forces: [
       "Extraction maximale : régulièrement là où la FW48 n'a pas le droit d'être",
@@ -532,7 +532,7 @@ export const drivers: Driver[] = [
     wins: 1,
     poles: 0,
     podiums: 5,
-    starts: 185,
+    starts: 186,
     skills: { qualif: 90, racecraft: 87, pneus: 86, pluie: 84, mental: 85, constance: 83 },
     forces: [
       "Vainqueur de Grand Prix — Monza 2020, l'improbable absolu",
@@ -566,7 +566,7 @@ export const drivers: Driver[] = [
     wins: 1,
     poles: 0,
     podiums: 4,
-    starts: 190,
+    starts: 191,
     skills: { qualif: 86, racecraft: 88, pneus: 88, pluie: 83, mental: 84, constance: 84 },
     forces: [
       "Vainqueur à Budapest 2021 : défense parfaite 66 tours contre Vettel",
@@ -600,7 +600,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 0,
     podiums: 0,
-    starts: 28,
+    starts: 29,
     skills: { qualif: 87, racecraft: 84, pneus: 82, pluie: 81, mental: 85, constance: 83 },
     forces: [
       "P7 à Djeddah pour Ferrari à 18 ans, sans essais — record d'adaptation",
@@ -634,7 +634,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 0,
     podiums: 0,
-    starts: 40,
+    starts: 41,
     skills: { qualif: 85, racecraft: 86, pneus: 83, pluie: 80, mental: 88, constance: 82 },
     forces: [
         "Résilience rare : viré de Red Bull après 2 courses, reconstruit chez VCARB",
@@ -668,7 +668,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 0,
     podiums: 0,
-    starts: 13,
+    starts: 14,
     skills: { qualif: 86, racecraft: 82, pneus: 78, pluie: 76, mental: 84, constance: 80 },
     forces: [
       "Seul rookie de la grille 2026 — repéré par Red Bull à 12 ans",
@@ -702,7 +702,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 0,
     podiums: 0,
-    starts: 37,
+    starts: 38,
     skills: { qualif: 87, racecraft: 84, pneus: 84, pluie: 80, mental: 86, constance: 85 },
     forces: [
       "Champion F3 et F2 en rookie : la filière parfaite",
@@ -736,7 +736,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 1,
     podiums: 3,
-    starts: 200,
+    starts: 201,
     skills: { qualif: 80, racecraft: 83, pneus: 84, pluie: 82, mental: 78, constance: 81 },
     forces: [
       "Pole à Istanbul 2020 sous la pluie — l'exploit reste réel",
@@ -770,7 +770,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 0,
     podiums: 0,
-    starts: 25,
+    starts: 26,
     skills: { qualif: 84, racecraft: 83, pneus: 80, pluie: 78, mental: 83, constance: 78 },
     forces: [
       "Points dès ses 2 premiers GP pour Williams (Bakou, Austin 2024)",
