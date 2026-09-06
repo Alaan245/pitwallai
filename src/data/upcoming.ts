@@ -28,77 +28,6 @@ export interface UpcomingRace {
 
 export const upcomingRaces: UpcomingRace[] = [
   {
-    id: "monza-2026",
-    round: 13,
-    gp: "Grand Prix d'Italie",
-    circuit: "Autodromo Nazionale Monza",
-    date: "6 septembre 2026",
-    days: "4–6 sept.",
-    sprint: false,
-    laps: 53,
-    circuitLength: "5,793 km",
-    drsZones: 4,
-    traits: [
-      "Temple de la vitesse — 350 km/h",
-      "Appuis minimum",
-      "Freinages extrêmes",
-      "Passion tifosi pour Ferrari",
-    ],
-    weather: { temp: "24–29 °C", rainRisk: 15, wind: "Faible" },
-    confidence: "Élevée",
-    contenders: [
-      {
-        driver: "Kimi Antonelli",
-        code: "ANT",
-        team: "Mercedes",
-        teamColor: "#27f4d2",
-        probability: 21,
-        rationale:
-          "Bien que l'italien part dernier à cause des pénalités moteur, le moteur Mercedes de la W17 est la référence en vitesse de pointe — et Monza, c'est 75 % de pleine charge. Grace à un rythme solide et une stratégie efficace, le modèle estime qu'il peut tout de même remporter cette course",
-      },
-      {
-        driver: "Lewis Hamilton",
-        code: "HAM",
-        team: "Ferrari",
-        teamColor: "#e8002d",
-        probability: 18,
-        rationale:
-          "5 victoires à Monza, record partagé. Sa lecture des freinages (Variante della Roggia) et l'énergie des tifosi : le modèle lui donne sa meilleure chance de victoire Ferrari de la saison.",
-      },
-      {
-        driver: "Lando Norris",
-        code: "NOR",
-        team: "McLaren",
-        teamColor: "#ff8000",
-        probability: 17,
-        rationale:
-          "La MCL40 à moteur Mercedes souffre moins que Ferrari en ligne droite. Le modèle le voit capitaliser sur une bataille Mercedes-Ferrari, comme à Monza 2021 (P2 derrière Ricciardo).",
-      },
-      {
-        driver: "Charles Leclerc",
-        code: "LEC",
-        team: "Ferrari",
-        teamColor: "#e8002d",
-        probability: 16,
-        rationale:
-          "Vainqueur ici en 2019 et 2024 — il connaît la trajectoire pour gagner avec une voiture pas la plus rapide. En qualif, sa spéciale : le tour parfait sous pression tifosi.",
-      },
-      {
-        driver: "George Russell",
-        code: "RUS",
-        team: "Mercedes",
-        teamColor: "#27f4d2",
-        probability: 11,
-        rationale:
-          "Même package qu'Antonelli mais une conversion course inférieure cette saison. Le modèle estime que Zandvoort n'a pas été un week-end concluant, demandant même à son équipe de ne pas laisser passer Antonelli. Il ne pourra probablement pas jouer la victoire, voir le podium.",
-      },
-    ],
-    scenario:
-      "Le scénario central (68 %) : Les Ferrari contrôlent depuis la première ligne, la question étant de savoir si Russell passe les Ferrari au départ, et si Antonelli est capable d'une remonté impressionnante — les départs sont LE moment clé de Monza, avec 420 m avant la première chicane. Hamilton est le meilleur starter du plateau 2026 : s'il mène au virage 1, les tifosi font le reste.",
-    xFactor:
-      "Le « slipstream warfare » : avec les monoplaces 2026 à aéro active, l'aspiration vaut 0,5 s. Un pilote 3e à 2 tours de l'arrivée n'est pas battu — il est exactement où il veut être.",
-  },
-  {
     id: "madrid-2026",
     round: 14,
     gp: "Grand Prix d'Espagne",
@@ -310,5 +239,76 @@ export const upcomingRaces: UpcomingRace[] = [
       "Premier GP à Sepang depuis 2017 : le modèle manque de données fiables et projette une variance très élevée. La chaleur et l'humidité feront probablement le tri entre ceux qui gèrent les pneus et ceux qui subissent. 2 à 3 arrêts attendus, avec un risque de pluie orageuse qui pourrait tout changer.",
     xFactor:
       "Les orages tropicaux soudains : Sepang est célèbre pour ses averses imprévisibles en fin d'après-midi. Aucun pilote du plateau n'a géré ce circuit sous la pluie avec une F1 moderne — cela pourrait créer un énorme reset de grille à 15 tours de l'arrivée.",
+  },
+  {
+    id: "singapour-2026",
+    round: 17,
+    gp: "Grand Prix de Singapour",
+    circuit: "Circuit urbain de Singapour",
+    date: "11 Octobre 2026",
+    days: "09-11 oct.",
+    sprint: true,
+    laps: 62,
+    circuitLength: "4,927 km",
+    drsZones: 5,
+    traits: [
+      "Circuit urbain nocturne le plus exigeant du calendrier",
+      "23 virages serrés — zéro marge face aux murs",
+      "Piste bosselée, chaleur et humidité (~80 %)",
+      "Safety car quasi systématique depuis 2008",
+    ],
+    weather: { temp: "27–30 °C (nuit)", rainRisk: 40, wind: "Faible, air lourd" },
+    confidence: "Moyenne",
+    contenders: [
+      {
+        driver: "Lando Norris",
+        code: "NOR",
+        team: "McLaren",
+        teamColor: "#ff8000",
+        probability: 23,
+        rationale:
+          "Marina Bay récompense la précision et la gestion des gommes sur long relais — le cœur du profil Norris. Le modèle lui donne l'avantage dès que les simulations imposent deux arrêts ou plus.",
+      },
+      {
+        driver: "Kimi Antonelli",
+        code: "ANT",
+        team: "Mercedes",
+        teamColor: "#27f4d2",
+        probability: 22,
+        rationale:
+          "Leader du championnat et vainqueur à Monza, mais le modèle applique ici son ajustement « circuit urbain » : dispersion de performance +40 % sur tracés à haute variance. Favori sur le papier, jamais à son meilleur entre les murs.",
+      },
+      {
+        driver: "Max Verstappen",
+        code: "VER",
+        team: "Red Bull",
+        teamColor: "#3671c6",
+        probability: 17,
+        rationale:
+          "À Singapour, les dépassements se jouent au freinage des virages lents — précisément le point fort du Néerlandais. Le modèle le voit sur le podium si la course reste propre, plus haut si le chaos s'en mêle.",
+      },
+      {
+        driver: "Charles Leclerc",
+        code: "LEC",
+        team: "Ferrari",
+        teamColor: "#e8002d",
+        probability: 13,
+        rationale:
+          "Après l'abandon de Monza, la réaction est attendue. Le modèle note sa précision en qualif sur tracés urbains — mais la Ferrari doit d'abord confirmer sa fiabilité pour prétendre à la victoire.",
+      },
+      {
+        driver: "George Russell",
+        code: "RUS",
+        team: "Mercedes",
+        teamColor: "#27f4d2",
+        probability: 10,
+        rationale:
+          "Régularité et discipline stratégique : profil type « collecteur de points » sur les courses longues et chaudes. Le modèle lui donne un podium probable, une victoire seulement si les favoris s'annulent.",
+      },
+    ],
+    scenario:
+      "Course nocturne marathon : le modèle projette une course proche des 2 heures, 2 à 3 arrêts, et une forte probabilité d'intervention de la safety car à mi-course. La gestion des gommes sur l'asphalte abrasif et la chaleur humide sera le facteur discriminant — Norris et Antonelli au coude-à-coude dans les simulations, avec Verstappen en embuscade dans le dernier tiers de la course.",
+    xFactor:
+      "L'orage tropical : une averse sur Marina Bay rend la piste glaciale en deux tours, et la fenêtre entre pneus pluie et slicks est la plus courte du calendrier. C'est historiquement là que le classement s'est le plus souvent bouleversé.",
   },
 ];

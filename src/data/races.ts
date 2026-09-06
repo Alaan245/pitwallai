@@ -22,6 +22,37 @@ export interface PastRace {
 export const pastRaces: PastRace[] = [
   // ── 2026 ─────────────────────────────────────────────────────
   {
+    id: "monza-2026",
+    year: 2026,
+    gp: "Grand Prix de Monza",
+    circuit: "Monza",
+    winner: "Kimi Antonelli",
+    winnerTeam: "Mercedes",
+    conditions: "Sec",
+    drama: 87,
+    podium: ["Kimi Antonelli", "George Russell", "Max Verstappen"],
+    summary:
+      "Le leader du championnat signe sa 7ème victoire de la saison : une course excpetionnel, partant 19ème sur la grille, il égale la deuxième meilleure romontada de l'histoire de la Formule 1.",
+    moments: [
+      { ref: "Q3", text: "Impressionante Pôle Position de Gasly à 0,60 s de Russell. 6 ans après sa premiere victoire ici même." },
+      { ref: "T1 - T2", text: "Au start, Leclerc pousse Hamilton dans le gravier, il passe P10. Au tour 2, leclerc sort violement à la Parabolica et immobilise sa voiture." },
+      { ref: "T18", text: "Antonelli remonte le peloton et prend la tête de la course face à Russell." },
+      { ref: "T50", text: "VSC et arrêt au stand d'Antonelli, il revient sur Russell et passe pour remporter son Grand prix à domicile." },
+    ],
+    aiDebrief: [
+      "Le départ à été particulièrement mouvementé : Gasly garde l'avantage sur Russell.Leclerc pousse Hamilton dans le gravier, il perd du temps et passe P10. Au tour 2, Leclerc sort violement à la Parabolica et abandonne. Kimi Antonelli quant à lieu saisi sa chance pour gagner un maximum de position, passant Albon, Alonso, Bottas, Perez, Stroll.. Il est P12 lors du drapeau rouge et passe P6 au restart. Russel prend le meilleur sur Gasly qui finira P7.",
+      "La victoire à été très disputé lors de cette course entre les deux Mercedes, les deux Mclaren, Gasly, Vertsappen et Hamilton. Toutefois, lors de la VSC, seuls Antonelli et Verstappen se sont arretés. Ils ont bénéficier de pneus frais pour remonter dans le peloton, et à Antonelli de décrocher la victoire.",
+      "Opportinuté pour le reste du plateau : Le modèle souligne l'excellente performance de Yuki Tsunoda (P10), ainsi que pour Lindblad (P7). De même pour Colapinto après un restart difficile.",
+    ],
+    keyStats: [
+      { label: "Victoire d'Antonelli", value: "N°7" },
+      { label: "DNF pour Ferrari", value: "LEC DNF T2" },
+      { label: "Moment clé", value: "Tour 50 — ANT P2 → P1" },
+      { label: "Yuki Tsunoda", value: "P10" },
+    ],
+  },
+  
+  {
     id: "zandoort-2026",
     year: 2026,
     gp: "Grand Prix des Pays-Bas",

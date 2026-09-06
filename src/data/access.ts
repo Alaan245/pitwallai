@@ -2,10 +2,10 @@
 export const FREE_DRIVER_IDS = new Set(["antonelli", "hamilton", "verstappen", "senna", "vettel"]);
 
 export const FREE_RACE_IDS = new Set([
-  "zandoort-2026",
+  "monza-2026",
   "abudhabi-2021",
   "interlagos-2008",
   "monaco-1984",
 ]);
 
-export const FREE_PREDICTION_IDS = new Set(["madrid-2026"]);
+export const FREE_PREDICTION_IDS = new Set(["baku-2026"]);

@@ -159,7 +159,7 @@ function RaceRow({ race, open, locked, onToggle }: { race: PastRace; open: boole
 }
 
 export default function Historique() {
-  const [openId, setOpenId] = useState<string | null>("hongrie-2026");
+  const [openId, setOpenId] = useState<string | null>(null);
   const [decade, setDecade] = useState<Decade>("all");
   const { isPremium } = usePlan();
 

@@ -52,10 +52,10 @@ export const drivers: Driver[] = [
     era: "current",
     active: true,
     titles: 0,
-    wins: 6,
+    wins: 7,
     poles: 4,
-    podiums: 11,
-    starts: 38,
+    podiums: 12,
+    starts: 39,
     skills: { qualif: 93, racecraft: 90, pneus: 86, pluie: 82, mental: 88, constance: 94 },
     forces: [
       "Constance de podium irréelle pour un sophomore (85 %)",
@@ -89,7 +89,7 @@ export const drivers: Driver[] = [
     wins: 105,
     poles: 104,
     podiums: 202,
-    starts: 383,
+    starts: 384,
     skills: { qualif: 92, racecraft: 97, pneus: 96, pluie: 98, mental: 90, constance: 91 },
     forces: [
       "Meilleur racecraft mesuré de l'histoire de la base",
@@ -122,8 +122,8 @@ export const drivers: Driver[] = [
     titles: 4,
     wins: 71,
     poles: 44,
-    podiums: 118,
-    starts: 233,
+    podiums: 119,
+    starts: 234,
     skills: { qualif: 95, racecraft: 98, pneus: 92, pluie: 96, mental: 93, constance: 90 },
     forces: [
       "Racecraft étalon-or : 84 % de dépassements réussis",
@@ -157,7 +157,7 @@ export const drivers: Driver[] = [
     wins: 13,
     poles: 18,
     podiums: 45,
-    starts: 151,
+    starts: 152,
     skills: { qualif: 93, racecraft: 91, pneus: 89, pluie: 88, mental: 84, constance: 87 },
     forces: [
       "Meilleure défense de position du plateau (78 %)",
@@ -191,7 +191,7 @@ export const drivers: Driver[] = [
     wins: 9,
     poles: 27,
     podiums: 47,
-    starts: 161,
+    starts: 162,
     skills: { qualif: 97, racecraft: 90, pneus: 84, pluie: 86, mental: 83, constance: 85 },
     forces: [
       "Vitesse qualif proche de l'étalon Senna (indice 97)",
@@ -224,8 +224,8 @@ export const drivers: Driver[] = [
     titles: 0,
     wins: 7,
     poles: 11,
-    podiums: 28,
-    starts: 151,
+    podiums: 29,
+    starts: 152,
     skills: { qualif: 94, racecraft: 87, pneus: 88, pluie: 84, mental: 82, constance: 89 },
     forces: [
       "Top 2 du plateau en performance pure sur un tour",
@@ -259,7 +259,7 @@ export const drivers: Driver[] = [
     wins: 9,
     poles: 6,
     podiums: 24,
-    starts: 71,
+    starts: 72,
     skills: { qualif: 90, racecraft: 88, pneus: 87, pluie: 80, mental: 91, constance: 86 },
     forces: [
       "Mental le plus froid du plateau (écart-type minimal)",
@@ -293,7 +293,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 0,
     podiums: 3,
-    starts: 38,
+    starts: 39,
     skills: { qualif: 88, racecraft: 85, pneus: 82, pluie: 78, mental: 86, constance: 84 },
     forces: [
       "Constance chirurgicale : zéro accident en 2026",
@@ -327,7 +327,7 @@ export const drivers: Driver[] = [
     wins: 32,
     poles: 22,
     podiums: 106,
-    starts: 431,
+    starts: 432,
     skills: { qualif: 91, racecraft: 95, pneus: 90, pluie: 94, mental: 96, constance: 88 },
     forces: [
       "Racecraft toujours top 3 du plateau à 45 ans",
@@ -361,7 +361,7 @@ export const drivers: Driver[] = [
     wins: 4,
     poles: 6,
     podiums: 27,
-    starts: 241,
+    starts: 242,
     skills: { qualif: 89, racecraft: 89, pneus: 91, pluie: 86, mental: 88, constance: 90 },
     forces: [
       "Meilleure lecture stratégique en voiture du plateau",
@@ -395,7 +395,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 1,
     podiums: 1,
-    starts: 271,
+    starts: 272,
     skills: { qualif: 88, racecraft: 84, pneus: 85, pluie: 87, mental: 82, constance: 86 },
     forces: [
       "Record de longévité sans victoire — brisé en beauté",
@@ -429,7 +429,7 @@ export const drivers: Driver[] = [
     wins: 10,
     poles: 20,
     podiums: 67,
-    starts: 251,
+    starts: 252,
     skills: { qualif: 92, racecraft: 83, pneus: 86, pluie: 80, mental: 84, constance: 85 },
     forces: [
       "20 poles : vitesse pure de très haut niveau",
@@ -463,7 +463,7 @@ export const drivers: Driver[] = [
     wins: 6,
     poles: 3,
     podiums: 39,
-    starts: 286,
+    starts: 287,
     skills: { qualif: 84, racecraft: 88, pneus: 93, pluie: 84, mental: 86, constance: 82 },
     forces: [
       "Gestion des pneus historique (indice 93)",
@@ -498,7 +498,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 0,
     podiums: 2,
-    starts: 136,
+    starts: 137,
     skills: { qualif: 88, racecraft: 86, pneus: 87, pluie: 82, mental: 87, constance: 88 },
     forces: [
       "Extraction maximale : régulièrement là où la FW48 n'a pas le droit d'être",
@@ -530,9 +530,9 @@ export const drivers: Driver[] = [
     active: true,
     titles: 0,
     wins: 1,
-    poles: 0,
+    poles: 1,
     podiums: 5,
-    starts: 186,
+    starts: 187,
     skills: { qualif: 90, racecraft: 87, pneus: 86, pluie: 84, mental: 85, constance: 83 },
     forces: [
       "Vainqueur de Grand Prix — Monza 2020, l'improbable absolu",
@@ -566,7 +566,7 @@ export const drivers: Driver[] = [
     wins: 1,
     poles: 0,
     podiums: 4,
-    starts: 191,
+    starts: 192,
     skills: { qualif: 86, racecraft: 88, pneus: 88, pluie: 83, mental: 84, constance: 84 },
     forces: [
       "Vainqueur à Budapest 2021 : défense parfaite 66 tours contre Vettel",
@@ -600,7 +600,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 0,
     podiums: 0,
-    starts: 29,
+    starts: 30,
     skills: { qualif: 87, racecraft: 84, pneus: 82, pluie: 81, mental: 85, constance: 83 },
     forces: [
       "P7 à Djeddah pour Ferrari à 18 ans, sans essais — record d'adaptation",
@@ -634,7 +634,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 0,
     podiums: 0,
-    starts: 41,
+    starts: 42,
     skills: { qualif: 85, racecraft: 86, pneus: 83, pluie: 80, mental: 88, constance: 82 },
     forces: [
         "Résilience rare : viré de Red Bull après 2 courses, reconstruit chez VCARB",
@@ -668,7 +668,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 0,
     podiums: 0,
-    starts: 14,
+    starts: 15,
     skills: { qualif: 86, racecraft: 82, pneus: 78, pluie: 76, mental: 84, constance: 80 },
     forces: [
       "Seul rookie de la grille 2026 — repéré par Red Bull à 12 ans",
@@ -702,7 +702,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 0,
     podiums: 0,
-    starts: 38,
+    starts: 39,
     skills: { qualif: 87, racecraft: 84, pneus: 84, pluie: 80, mental: 86, constance: 85 },
     forces: [
       "Champion F3 et F2 en rookie : la filière parfaite",
@@ -736,7 +736,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 1,
     podiums: 3,
-    starts: 201,
+    starts: 202,
     skills: { qualif: 80, racecraft: 83, pneus: 84, pluie: 82, mental: 78, constance: 81 },
     forces: [
       "Pole à Istanbul 2020 sous la pluie — l'exploit reste réel",
@@ -770,7 +770,7 @@ export const drivers: Driver[] = [
     wins: 0,
     poles: 0,
     podiums: 0,
-    starts: 26,
+    starts: 27,
     skills: { qualif: 84, racecraft: 83, pneus: 80, pluie: 78, mental: 83, constance: 78 },
     forces: [
       "Points dès ses 2 premiers GP pour Williams (Bakou, Austin 2024)",
@@ -805,7 +805,7 @@ export const drivers: Driver[] = [
     wins: 53,
     poles: 57,
     podiums: 122,
-    starts: 299,
+    starts: 300,
     skills: { qualif: 96, racecraft: 90, pneus: 91, pluie: 89, mental: 85, constance: 92 },
     forces: [
       "Conversion pole-victoire record : 63 %",
@@ -838,7 +838,7 @@ export const drivers: Driver[] = [
     wins: 21,
     poles: 18,
     podiums: 103,
-    starts: 349,
+    starts: 350,
     skills: { qualif: 93, racecraft: 92, pneus: 89, pluie: 90, mental: 88, constance: 85 },
     forces: [
       "Titre 2007 chipé d'un point à deux rivaux McLaren",
@@ -871,7 +871,7 @@ export const drivers: Driver[] = [
     wins: 15,
     poles: 8,
     podiums: 50,
-    starts: 306,
+    starts: 307,
     skills: { qualif: 88, racecraft: 91, pneus: 95, pluie: 92, mental: 90, constance: 87 },
     forces: [
       "Maître absolu des conditions changeantes",
@@ -904,7 +904,7 @@ export const drivers: Driver[] = [
     wins: 23,
     poles: 30,
     podiums: 57,
-    starts: 206,
+    starts: 207,
     skills: { qualif: 94, racecraft: 87, pneus: 87, pluie: 84, mental: 93, constance: 90 },
     forces: [
       "Seul homme à battre Hamilton à armes égales (2016)",
@@ -937,7 +937,7 @@ export const drivers: Driver[] = [
     wins: 11,
     poles: 16,
     podiums: 41,
-    starts: 269,
+    starts: 270,
     skills: { qualif: 89, racecraft: 86, pneus: 85, pluie: 84, mental: 82, constance: 84 },
     forces: [
       "11 victoires dont 2 à domicile, à Interlagos",
@@ -970,7 +970,7 @@ export const drivers: Driver[] = [
     wins: 8,
     poles: 3,
     podiums: 32,
-    starts: 257,
+    starts: 258,
     skills: { qualif: 91, racecraft: 93, pneus: 88, pluie: 86, mental: 85, constance: 82 },
     forces: [
       "Le dernier maître du divebomb au freinage tardif",
@@ -1005,7 +1005,7 @@ export const drivers: Driver[] = [
     wins: 41,
     poles: 65,
     podiums: 80,
-    starts: 161,
+    starts: 162,
     skills: { qualif: 100, racecraft: 95, pneus: 88, pluie: 100, mental: 94, constance: 89 },
     forces: [
       "Référence de calibration qualif : indice 100",
@@ -1038,7 +1038,7 @@ export const drivers: Driver[] = [
     wins: 51,
     poles: 33,
     podiums: 106,
-    starts: 199,
+    starts: 200,
     skills: { qualif: 90, racecraft: 92, pneus: 98, pluie: 85, mental: 95, constance: 96 },
     forces: [
       "Meilleure gestion de championnat de l'histoire",
@@ -1071,7 +1071,7 @@ export const drivers: Driver[] = [
     wins: 91,
     poles: 68,
     podiums: 155,
-    starts: 306,
+    starts: 307,
     skills: { qualif: 95, racecraft: 96, pneus: 94, pluie: 97, mental: 97, constance: 98 },
     forces: [
       "Constance record : 15 saisons de suite avec victoire",
@@ -1104,7 +1104,7 @@ export const drivers: Driver[] = [
     wins: 24,
     poles: 29,
     podiums: 35,
-    starts: 51,
+    starts: 52,
     skills: { qualif: 92, racecraft: 97, pneus: 95, pluie: 93, mental: 98, constance: 95 },
     forces: [
       "47 % de victoires sur ses départs — record éternel",
@@ -1137,7 +1137,7 @@ export const drivers: Driver[] = [
     wins: 25,
     poles: 24,
     podiums: 54,
-    starts: 171,
+    starts: 172,
     skills: { qualif: 89, racecraft: 91, pneus: 93, pluie: 88, mental: 99, constance: 94 },
     forces: [
       "Score mental le plus élevé de la base (99)",
@@ -1170,7 +1170,7 @@ export const drivers: Driver[] = [
     wins: 25,
     poles: 33,
     podiums: 32,
-    starts: 72,
+    starts: 73,
     skills: { qualif: 97, racecraft: 94, pneus: 92, pluie: 96, mental: 90, constance: 88 },
     forces: [
       "46 % de poles sur ses départs",
